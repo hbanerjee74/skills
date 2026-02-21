@@ -14,7 +14,7 @@ Skills published here can be imported into Vibedata directly from this repositor
 
 ## Skill Marketplace
 
-This repository is the official Vibedata Skills Marketplace. Build a skill using [Vibedata](https://accleratedata.ai), then share it with the community by submitting a pull request. Once merged, your skill is available for anyone to import directly from the app.
+This repository is the official Vibedata Skills Marketplace. Build a skill using the [Skill Builder] (https://github.com/hbanerjee74/skill-builder). Skills developed in Skill Builder can be imported into Vibedata for builder, deploy and operator agents. 
 
 ### Where skills appear in the app
 
@@ -71,6 +71,7 @@ Every skill's `SKILL.md` must include the following front matter fields:
 | Field | Required | Description |
 |---|---|---|
 | `type` | Yes | One of the 5 types in the table above |
+| `domain` | Yes | The business or technical domain this skill covers (e.g. `e-commerce`, `financial services`, `dbt on Fabric`) |
 | `version` | Yes | Semantic version (e.g. `1.0.0`). Increment on meaningful updates. |
 
 ### Example
@@ -84,6 +85,7 @@ description: >
   mentions OneLake, lakehouse, or Fabric-specific dbt quirks.
 tools: Read, Write, Edit, Glob, Grep, Bash
 type: platform
+domain: dbt on Microsoft Fabric
 version: 1.0.0
 ---
 ```

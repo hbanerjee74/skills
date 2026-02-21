@@ -1,12 +1,12 @@
 # Vibedata Skills Marketplace
 
-A public collection of skills for [Vibedata](https://vibedata.ai) — structured knowledge packages that teach Claude domain-specific patterns for data and analytics engineering.
+A public collection of skills for [Vibedata](https://accleratedata.ai) — structured knowledge packages that teach Claude domain-specific patterns for data and analytics engineering.
 
 ---
 
 ## What are Vibedata Skills?
 
-A skill is a markdown knowledge package (`SKILL.md` + optional reference files) that loads domain expertise directly into Claude's working context. Skills are not code extensions — they are curated, practitioner-level guidance on how to work with specific platforms, data domains, source systems, and engineering patterns.
+Vibedata Skills are [Claude agent skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) — curated, practitioner-level knowledge packages for data and analytics engineering. Each skill teaches Claude domain-specific patterns for platforms, source systems, business domains, and engineering practices.
 
 Skills published here can be imported into Vibedata directly from this repository.
 

@@ -14,7 +14,7 @@ Skills published here can be imported into Vibedata directly from this repositor
 
 ## Skill Marketplace
 
-The Vibedata app treats this repository as its marketplace. Skills flow **one way**: from this repo into the app. There is no publish button — contributions are made via pull request.
+This repository is the official Vibedata Skills Marketplace. Build a skill using [Vibedata](https://accleratedata.ai), then share it with the community by submitting a pull request. Once merged, your skill is available for anyone to import directly from the app.
 
 ### Where skills appear in the app
 

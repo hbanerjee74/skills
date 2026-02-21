@@ -12,7 +12,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 trigger: >
   When working on any skill generation, validation, or refinement task,
   read and follow the skill at `.claude/skills/skill-builder-practices/SKILL.md`.
-
+---
 
 # Skill Builder Practices
 

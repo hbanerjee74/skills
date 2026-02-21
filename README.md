@@ -74,6 +74,8 @@ Every skill's `SKILL.md` must include the following front matter fields:
 | `domain` | Yes | The business or technical domain this skill covers (e.g. `e-commerce`, `financial services`, `dbt on Fabric`) |
 | `version` | Yes | Semantic version (e.g. `1.0.0`). Increment on meaningful updates. |
 
+For the full list of optional Claude Code skill fields, see the [Claude Code skills reference](https://code.claude.com/docs/en/skills).
+
 ### Example
 
 ```yaml

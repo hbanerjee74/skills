@@ -1,0 +1,11 @@
+{
+  "name": "skills",
+  "owner": { "name": "hbanerjee74" },
+  "metadata": { "pluginRoot": "./plugins" },
+  "plugins": [
+    { "name": "skill-builder",           "source": "./plugins/skill-builder" },
+    { "name": "skill-builder-research",  "source": "./plugins/skill-builder-research" },
+    { "name": "skill-builder-validate",  "source": "./plugins/skill-builder-validate" },
+    { "name": "skill-builder-practices", "source": "./plugins/skill-builder-practices" }
+  ]
+}

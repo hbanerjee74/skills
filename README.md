@@ -148,4 +148,4 @@ All submissions are reviewed before merging. Skills that fail front matter valid
 
 ## License
 
-MIT — see [LICENSE](./LICENSE)
+Elastic License 2.0 — see [LICENSE](./LICENSE)

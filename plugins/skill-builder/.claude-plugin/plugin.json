@@ -1,6 +1,1 @@
-{
-  "name": "skill-builder",
-  "version": "0.1.0",
-  "description": "Coordinator skill + agents for building domain-specific Claude skills through a guided multi-agent workflow.",
-  "skills": "./skills/"
-}
+{"name":"skill-builder","version":"0.0.0-test","description":"Multi-agent workflow for creating domain-specific Claude skills","skills":"./skills/"}

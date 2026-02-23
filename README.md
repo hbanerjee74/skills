@@ -1,6 +1,6 @@
 # Vibedata Skills Marketplace
 
-A public collection of skills for [Vibedata](https://accleratedata.ai) — structured knowledge packages that teach Claude domain-specific patterns for data and analytics engineering.
+A public collection of skills for [Vibedata](https://acceleratedata.ai) — structured knowledge packages that teach Claude domain-specific patterns for data and analytics engineering.
 
 ---
 

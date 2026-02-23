@@ -1,6 +1,6 @@
 {
   "name": "skill-builder-validate",
-  "version": "0.0.0-test",
+  "version": "0.9.9-rc11",
   "description": "Validate skill for quality checking and companion recommendations",
   "author": {
     "name": "hbanerjee74"

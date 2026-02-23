@@ -34,9 +34,9 @@ Otherwise, classify as `feature` or `bug`. Ask **at most 2** targeted clarificat
 
 ## Research and Draft
 
-**Features:** See [feature-flow.md](references/feature-flow.md). Ask user whether to proceed directly or explore alternatives. Either way, codebase is reviewed for feasibility (internal only). If exploring, spawn parallel sub-agents for codebase + internet research, synthesize 2-3 options. User picks, requirements are written, max 2 refinement rounds.
+**Features:** See [feature-flow.md](references/feature-flow.md). Ask user whether to proceed directly or explore alternatives. Either way, existing skills and plugins are scanned for duplication and structural fit (internal only). If exploring, spawn parallel sub-agents for repo scan + internet research, synthesize 2-3 options. User picks, requirements are written, max 2 refinement rounds.
 
-**Bugs:** See [bug-flow.md](references/bug-flow.md). Investigate code + git history. Present user-visible symptoms, reproduction steps, and severity for confirmation.
+**Bugs:** See [bug-flow.md](references/bug-flow.md). Investigate existing content + git history. Present user-visible symptoms, reproduction steps, and severity for confirmation.
 
 ## Estimate
 
@@ -53,7 +53,7 @@ Fetch projects and labels from Linear. Confirm details with user — project, la
 Triggered when the user provides an existing issue ID with intent to break it down (e.g., "break down <issue-id>", "decompose <issue-id>", "split <issue-id>").
 
 1. **Fetch**: Get the issue details and available projects/labels from Linear in parallel.
-2. **Analyze & Propose**: Spawn a `feature-dev:code-explorer` sub-agent to map requirements to affected areas. Split into 2-4 child issues, each ≤ L estimate, with title, requirements subset, ACs, and estimate. Present to user for confirmation.
+2. **Analyze & Propose**: Spawn an `Explore` sub-agent to scan existing skills and plugins for overlap and structural considerations. Split into 2-4 child issues, each ≤ L estimate, with title, requirements subset, ACs, and estimate. Present to user for confirmation.
 3. **Create**: Spawn parallel sub-agents to create each child issue (`assignee: "me"`). Reference the parent issue ID in each child's context. Update the parent issue description to list the child issues.
 
 ## Sub-agent Delegation

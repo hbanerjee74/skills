@@ -4,13 +4,13 @@
 
 Ask the user: proceed with the stated approach, or explore alternatives first?
 
-In both cases, the codebase is reviewed internally for feasibility. The difference is scope.
+In both cases, the existing skills and plugins are scanned internally for duplication and structural fit. The difference is scope.
 
 ## Step 2a: Direct Path
 
-Spawn a single `feature-dev:code-explorer` sub-agent to review the codebase and assess feasibility. It returns:
+Spawn a single `Explore` sub-agent to scan `skills/` and `plugins/` and assess:
 
-**INTERNAL (coordinator only):** feasibility, scope signal (XS/S/M/L), constraints.
+**INTERNAL (coordinator only):** existing skills that overlap, naming conflicts, structural fit, scope signal (XS/S/M/L).
 
 **FOR THE ISSUE:** numbered requirements + checkbox ACs. Product-level only.
 
@@ -18,8 +18,8 @@ Spawn a single `feature-dev:code-explorer` sub-agent to review the codebase and 
 
 Spawn an **exploration team lead** that coordinates parallel sub-agents:
 
-1. **Codebase analyst** (`feature-dev:code-explorer`) — feasibility, constraints, scope (internal only)
-2. **External researcher** — how similar products handle this, UX patterns, backend patterns
+1. **Repo analyst** (`Explore`) — existing skills/plugins for overlap, naming conflicts, structural constraints (internal only)
+2. **External researcher** — how similar skills are structured, domain patterns, best practices
 
 The team lead synthesizes into 2-3 product-level options. Always include the user's original approach. No implementation details.
 

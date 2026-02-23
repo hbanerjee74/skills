@@ -53,20 +53,18 @@ Spawn a **single `general-purpose` sub-agent** with the worktree path, `gitBranc
 
 1. Rebase the branch onto `origin/main` (from the worktree directory)
 2. If conflicts occur, attempt to resolve. Escalate to coordinator (who asks the user) if human judgment is needed.
-3. Run `npx tsc --noEmit` (from the `app/` directory in the worktree) — catches type errors introduced by rebase or missed during implementation. If errors found, fix them, commit, and re-run until clean.
-4. Push with `--force-with-lease`
-5. Wait for required CI to pass (`gh pr checks --watch --required`)
-6. Merge the PR with `--delete-branch` (prefer squash if allowed)
-7. Return: merge commit SHA
+3. Push with `--force-with-lease`
+4. Merge the PR with `--delete-branch` (prefer squash if allowed)
+5. Return: merge commit SHA
 
-If CI or merge fails, report to user and stop.
+If merge fails, report to user and stop.
 
 ## Close (do these steps exactly)
 
 Run in **parallel** (two `Task` calls in one turn):
 
 - Move **all issues** to **Done**: The primary issue plus every `Fixes <issue-id>` from the PR body (which includes same-PR children identified earlier). Move each to Done via `linear-server:update_issue` and add a closing comment via `linear-server:create_comment` with the PR URL and merge commit. (model: `haiku`)
-- From the **main repo directory** (not the worktree): remove the worktree with `git worktree remove --force` (needed because build caches like `.vite/` are gitignored but still present on disk), delete the local branch, delete the remote branch (`git push origin --delete <branchName>` — do NOT rely on `--delete-branch` from the merge step), pull latest main. If the worktree directory still exists after removal, report back — coordinator will ask user before taking further action.
+- From the **main repo directory** (not the worktree): remove the worktree with `git worktree remove --force`, delete the local branch, delete the remote branch (`git push origin --delete <branchName>` — do NOT rely on `--delete-branch` from the merge step), pull latest main. If the worktree directory still exists after removal, report back — coordinator will ask user before taking further action.
 
 Report to user: issue closed, PR merged, worktree and branches removed.
 

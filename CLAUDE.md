@@ -85,7 +85,7 @@ claude plugin validate ./plugins/skill-builder   # validate structure
 - Standalone skill entries: add `"description"` and `"strict": false`
 - Skills are auto-discovered — no `skills` field in entries, no `$schema`
 
-To sync this file after adding or moving skills, use the **`update-marketplace`** skill (`.claude/skills/update-marketplace/`).
+To sync this file after adding or moving skills, run `/update-marketplace` (see Custom Skills below).
 
 ---
 
@@ -103,3 +103,13 @@ To sync this file after adding or moving skills, use the **`update-marketplace`*
 - `"skills"` field in `plugin.json` — not in spec, skills are auto-discovered
 - Single-line `plugin.json` — format as pretty-printed JSON
 - Bumping `version` in both `plugin.json` and the marketplace entry — manifest always wins
+
+---
+
+## Custom Skills
+
+### /update-marketplace
+
+When the user runs `/update-marketplace`, or asks to sync, refresh, or update the marketplace,
+or says a new skill or plugin has been added and the marketplace needs updating,
+read and follow the skill at `.claude/skills/update-marketplace/SKILL.md`.

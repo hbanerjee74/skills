@@ -61,7 +61,7 @@
     {
       "name": "mock-skill",
       "description": "A mock skill generated for UI development testing.",
-      "source": "./skills/cat-food",
+      "source": "./skills/smoking",
       "strict": false
     }
   ]

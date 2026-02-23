@@ -1,1 +1,8 @@
-{"name":"skill-builder","version":"0.0.0-test","description":"Multi-agent workflow for creating domain-specific Claude skills","skills":"./skills/"}
+{
+  "name": "skill-builder",
+  "version": "0.0.0-test",
+  "description": "Multi-agent workflow for creating domain-specific Claude skills",
+  "author": {
+    "name": "hbanerjee74"
+  }
+}

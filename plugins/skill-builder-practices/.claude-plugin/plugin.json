@@ -1,1 +1,8 @@
-{"name":"skill-builder-practices","version":"0.0.0-test","description":"Content guidelines and patterns for skill structure","skills":"./skills/"}
+{
+  "name": "skill-builder-practices",
+  "version": "0.0.0-test",
+  "description": "Content guidelines and patterns for skill structure",
+  "author": {
+    "name": "hbanerjee74"
+  }
+}

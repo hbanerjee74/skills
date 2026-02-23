@@ -1,1 +1,8 @@
-{"name":"skill-builder-validate","version":"0.0.0-test","description":"Validate skill for quality checking and companion recommendations","skills":"./skills/"}
+{
+  "name": "skill-builder-validate",
+  "version": "0.0.0-test",
+  "description": "Validate skill for quality checking and companion recommendations",
+  "author": {
+    "name": "hbanerjee74"
+  }
+}

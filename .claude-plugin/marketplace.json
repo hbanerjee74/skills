@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "vibedata-skills",
   "owner": { "name": "hbanerjee74" },
   "metadata": {
@@ -15,64 +14,55 @@
       "name": "dbt-fabric-patterns",
       "description": "Practitioner-level dbt patterns for Microsoft Fabric. Covers materialization decisions, incremental model gotchas, snapshot strategies, and Fabric-specific T-SQL quirks.",
       "source": "./skills/dbt-fabric-patterns",
-      "strict": false,
-      "skills": ["./skills/dbt-fabric-patterns"]
+      "strict": false
     },
     {
       "name": "dbt-semantic-layer",
       "description": "Define semantic models and MetricFlow metrics in dbt on Microsoft Fabric. Covers entity type selection, metric type decisions, and join path design.",
       "source": "./skills/dbt-semantic-layer",
-      "strict": false,
-      "skills": ["./skills/dbt-semantic-layer"]
+      "strict": false
     },
     {
       "name": "dbt-snapshot-scd2",
       "description": "Implement SCD Type 2 snapshots in dbt on Microsoft Fabric. Covers timestamp vs check strategies, Fabric datetime2 quirks, and snapshot drift debugging.",
       "source": "./skills/dbt-snapshot-scd2",
-      "strict": false,
-      "skills": ["./skills/dbt-snapshot-scd2"]
+      "strict": false
     },
     {
       "name": "dlt-rest-api-connector",
       "description": "Build dlt REST API pipelines to ADLS Gen2 and OneLake. Covers RESTAPIConfig, pagination patterns, schema contracts, and the dlt-to-dbt handoff.",
       "source": "./skills/dlt-rest-api-connector",
-      "strict": false,
-      "skills": ["./skills/dlt-rest-api-connector"]
+      "strict": false
     },
     {
       "name": "elementary-data-quality",
       "description": "Configure Elementary anomaly detection for dbt on Microsoft Fabric. Covers test placement by medallion layer, volume and column anomalies, and silent failure debugging.",
       "source": "./skills/elementary-data-quality",
-      "strict": false,
-      "skills": ["./skills/elementary-data-quality"]
+      "strict": false
     },
     {
       "name": "revenue-domain",
       "description": "Map revenue recognition to dbt medallion architecture on Microsoft Fabric. Covers ASC 606 five-step model, entity classification, allocation logic, and deferred revenue patterns.",
       "source": "./skills/revenue-domain",
-      "strict": false,
-      "skills": ["./skills/revenue-domain"]
+      "strict": false
     },
     {
       "name": "salesforce-extraction",
       "description": "Extract Salesforce data via dlt into dbt on Microsoft Fabric. Covers CPQ overrides, soft deletes, managed package fields, and CDC timestamp choices.",
       "source": "./skills/salesforce-extraction",
-      "strict": false,
-      "skills": ["./skills/salesforce-extraction"]
+      "strict": false
     },
     {
       "name": "skill-builder-practices-skill",
       "description": "Skill structure rules, content principles, quality dimensions, and anti-patterns for generating data engineering skills.",
       "source": "./skills/skill-builder-practices",
-      "strict": false,
-      "skills": ["./skills/skill-builder-practices"]
+      "strict": false
     },
     {
       "name": "mock-skill",
       "description": "A mock skill generated for UI development testing.",
       "source": "./skills/cat-food",
-      "strict": false,
-      "skills": ["./skills/cat-food"]
+      "strict": false
     }
   ]
 }

@@ -20,7 +20,7 @@ skills/
     └── context/            # Optional — process artifacts (research, decisions, evals in progress)
 ```
 
-The `.claude-plugin/marketplace.json` file registers all skills so Claude Code can discover them as a plugin marketplace.
+The `.claude-plugin/marketplace.json` file registers all plugins and skills so Claude Code can discover them as a plugin marketplace (see [marketplace.json format](#claude-pluginmarketplacejson-format) below).
 
 ### Required front matter fields
 
@@ -87,6 +87,55 @@ Trigger conditions belong **exclusively in the description front matter**. Do NO
 
 For dbt skills, include layer-specific triggers so the skill activates on silver/gold work:
 > `Also use when the user mentions "[domain] models", "silver layer", "gold layer", "marts", or "[domain]-specific dbt".`
+
+## `.claude-plugin/marketplace.json` format
+
+Based on the [official Claude Code docs](https://code.claude.com/docs/en/plugin-marketplaces).
+
+### Marketplace-level fields
+
+| Field | Required | Description |
+|---|---|---|
+| `name` | Yes | Marketplace identifier — kebab-case, no spaces. Users see this when installing: `/plugin install tool@<name>`. Reserved names (e.g. `agent-skills`) cannot be used. |
+| `owner.name` | Yes | Maintainer name |
+| `owner.email` | No | Contact email |
+| `metadata.description` | No | Brief marketplace description |
+| `metadata.version` | No | Marketplace version |
+| `metadata.pluginRoot` | No | Base directory prepended to relative `source` paths (e.g. `"./plugins"` lets you write `"source": "formatter"` instead of `"source": "./plugins/formatter"`) |
+
+### Plugin entry fields
+
+Each entry in `plugins` requires `name` and `source`. All other fields are optional.
+
+| Field | Description |
+|---|---|
+| `name` | Plugin identifier — kebab-case, no spaces |
+| `source` | Where to fetch the plugin. Use `"./path"` for local directories within the repo (must start with `./`). Also supports `{ "source": "github", "repo": "owner/repo" }`, npm, pip, and git URL sources. |
+| `description` | Brief plugin description |
+| `version` | Plugin version |
+| `strict` | `true` (default): `plugin.json` inside the plugin directory is the authority. `false`: marketplace entry is the complete definition — use this for plugins that have no `plugin.json`. |
+| `commands` | Custom paths to command files or directories |
+| `agents` | Custom paths to agent files |
+| `hooks` | Hooks configuration or path to hooks file |
+| `mcpServers` | MCP server configurations |
+| `lspServers` | LSP server configurations |
+
+**Note:** Skills are auto-discovered by Claude Code when it scans the plugin directory for `SKILL.md` files. There is no `skills` field in `marketplace.json`. Do not add a `$schema` field — it is not part of the documented spec.
+
+Skill-only entries (no `plugin.json` in the directory) should use `"strict": false` so Claude Code treats the marketplace entry as the complete plugin definition.
+
+### Validate and test
+
+```bash
+# Validate marketplace.json syntax and structure
+claude plugin validate .
+
+# Test by adding the marketplace locally
+/plugin marketplace add ./
+
+# Install a plugin to verify it works
+/plugin install dbt-fabric-patterns@vibedata-skills
+```
 
 ## Anti-patterns
 

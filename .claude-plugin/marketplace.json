@@ -63,6 +63,12 @@
       "description": "A mock skill generated for UI development testing.",
       "source": "./skills/cat-food",
       "strict": false
+    },
+    {
+      "name": "update-marketplace",
+      "description": "Updates .claude-plugin/marketplace.json by scanning the repo for plugins and standalone skills, then reconciling the file with what is actually present.",
+      "source": "./skills/update-marketplace",
+      "strict": false
     }
   ]
 }

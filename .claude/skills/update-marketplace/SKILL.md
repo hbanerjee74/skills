@@ -69,7 +69,7 @@ For each discovered source (plugins first, then skills, both alphabetical by nam
 | Case | Action |
 |---|---|
 | Source exists in repo AND in current marketplace.json | Update `name` and `description` from the source file. Preserve any other fields on the existing entry (e.g. manually-set `version`). |
-| Source exists in repo but NOT in marketplace.json | Append a new entry. |
+| Source exists in repo but NOT in marketplace.json | **Do not silently add.** Flag the entry, print a warning with the proposed entry, and ask the user whether to add it before writing. |
 | Entry is in marketplace.json but source directory does not exist | **Do not silently remove.** Flag the entry, print a warning, and ask the user whether to remove it before writing. |
 
 ### Step 5 — Write
@@ -89,7 +89,8 @@ After writing, print a summary:
 
 ```
 marketplace.json updated
-  Added:   <n> entries — <names>
+  Added:   <n> entries — <names> (user confirmed)
+  Pending: <n> entries awaiting add confirmation — <names>
   Updated: <n> entries — <names>
   Flagged: <n> entries with missing source — <names> (awaiting confirmation)
   Unchanged: <n> entries

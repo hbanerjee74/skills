@@ -9,7 +9,7 @@ description: >
 tools: Read, Write, Edit, Glob, Grep, Bash
 type: platform
 domain: dbt on Microsoft Fabric
-version: 1.0.2
+version: 1.0.5
 ---
 
 # dbt on Fabric — Practitioner Patterns

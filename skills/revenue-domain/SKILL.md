@@ -8,7 +8,7 @@ description: >
 tools: Read, Write, Edit, Glob, Grep, Bash
 type: domain
 domain: revenue recognition
-version: 1.0.0
+version: 1.0.2
 ---
 
 # Revenue Recognition Domain -- dbt Medallion Mapping

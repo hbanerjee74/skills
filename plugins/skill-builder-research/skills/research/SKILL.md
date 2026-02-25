@@ -6,6 +6,7 @@ description: >
   complete clarifications.md content as inline text with === RESEARCH PLAN === and
   === CLARIFICATIONS === delimiters.
 domain: Skill Builder
+version: 1.0.1
 type: skill-builder
 ---
 

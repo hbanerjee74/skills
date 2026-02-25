@@ -24,7 +24,7 @@ source files, and reconciles with the existing marketplace entry list.
 
 | Source type | Detected by | `strict` | Entry format |
 |---|---|---|---|
-| Plugin | `plugins/<dir>/.claude-plugin/plugin.json` exists | omit (defaults `true`) | `{ "name", "source" }` |
+| Plugin | `plugins/<dir>/.claude-plugin/plugin.json` exists | omit (defaults `true`) | `{ "name", "description", "source" }` |
 | Standalone skill | `skills/<dir>/SKILL.md` exists | `false` | `{ "name", "description", "source", "strict": false }` |
 
 Merge key: `source` path (e.g. `"./plugins/skill-builder"` or `"./skills/dbt-fabric-patterns"`).
@@ -80,8 +80,8 @@ Overwrite `.claude-plugin/marketplace.json` with the merged result:
 - Write the `plugins` array: plugin entries first, then standalone skill entries.
 - Within each group, sort alphabetically by `name`.
 - Format as pretty-printed JSON with 2-space indentation.
-- Compact single-field plugin entries onto one line for readability
-  (e.g. `{ "name": "skill-builder", "source": "./plugins/skill-builder" }`).
+- Compact plugin entries with short descriptions onto one line for readability
+  (e.g. `{ "name": "skill-builder", "description": "...", "source": "./plugins/skill-builder" }`).
 
 ### Step 6 — Report
 
@@ -99,8 +99,12 @@ marketplace.json updated
 ## Entry format reference
 
 ```json
-// Plugin entry — no strict field
-{ "name": "skill-builder", "source": "./plugins/skill-builder" }
+// Plugin entry — includes description, no strict field
+{
+  "name": "skill-builder",
+  "description": "Builds data engineering skills...",
+  "source": "./plugins/skill-builder"
+}
 
 // Standalone skill entry — strict: false required
 {

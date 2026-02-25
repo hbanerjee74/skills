@@ -10,59 +10,6 @@
     { "name": "skill-builder-practices","source": "./plugins/skill-builder-practices" },
     { "name": "skill-builder-research", "source": "./plugins/skill-builder-research" },
     { "name": "skill-builder-validate", "source": "./plugins/skill-builder-validate" },
-    {
-      "name": "dbt-fabric-patterns",
-      "description": "Practitioner-level dbt patterns for Microsoft Fabric. Covers materialization decisions, incremental model gotchas, snapshot strategies, selector/tag patterns, ref() chain rules, and Fabric-specific T-SQL quirks. Use when writing, reviewing, or debugging dbt models on Fabric. Also use when setting up dbt_project.yml configuration or CI/CD pipelines for dbt-fabric projects.",
-      "source": "./skills/dbt-fabric-patterns",
-      "strict": false
-    },
-    {
-      "name": "dbt-semantic-layer",
-      "description": "Define semantic models and MetricFlow metrics in dbt on Microsoft Fabric. Use when creating semantic model YAML, defining entities, dimensions, and measures, or configuring metric types. Also use when choosing between denormalized marts and semantic layer queries.",
-      "source": "./skills/dbt-semantic-layer",
-      "strict": false
-    },
-    {
-      "name": "dbt-snapshot-scd2",
-      "description": "Implement SCD Type 2 snapshots in dbt on Microsoft Fabric. Use when building snapshot models, choosing between timestamp and check strategies, or handling Fabric-specific datetime2 quirks. Also use when tracking slowly changing dimensions or debugging snapshot drift.",
-      "source": "./skills/dbt-snapshot-scd2",
-      "strict": false
-    },
-    {
-      "name": "dlt-rest-api-connector",
-      "description": "Build dlt REST API pipelines to ADLS Gen2 and OneLake. Use when configuring RESTAPIConfig, handling pagination, or setting schema contracts for REST sources. Also use when landing REST API data into Fabric lakehouses or debugging schema evolution.",
-      "source": "./skills/dlt-rest-api-connector",
-      "strict": false
-    },
-    {
-      "name": "elementary-data-quality",
-      "description": "Configure Elementary anomaly detection for dbt on Microsoft Fabric. Use when placing data quality tests by medallion layer, setting up volume or column anomalies, or configuring timestamp_column. Also use when debugging silent test failures or choosing severity levels.",
-      "source": "./skills/elementary-data-quality",
-      "strict": false
-    },
-    {
-      "name": "mock-skill",
-      "description": "A mock skill generated for UI development testing. Provides guidance on building well-structured applications with proper error handling, testing, and deployment patterns.",
-      "source": "./skills/smoking",
-      "strict": false
-    },
-    {
-      "name": "revenue-domain",
-      "description": "Map revenue recognition to dbt medallion architecture on Microsoft Fabric. Use when modeling revenue entities, defining recognition rules, or building silver/gold layers for revenue reporting. Also use when implementing ASC 606 or handling multi-element arrangements.",
-      "source": "./skills/revenue-domain",
-      "strict": false
-    },
-    {
-      "name": "salesforce-extraction",
-      "description": "Extract Salesforce data via dlt into dbt on Microsoft Fabric. Use when building Salesforce pipelines, handling CPQ overrides, soft deletes, or managed package fields. Also use when choosing CDC timestamps or debugging missing Salesforce records.",
-      "source": "./skills/salesforce-extraction",
-      "strict": false
-    },
-    {
-      "name": "skill-builder-practices",
-      "description": "Skill structure rules, content principles, quality dimensions, and anti-patterns for generating data engineering skills. Use when generating, validating, refining, or rewriting a skill. Also use when reviewing skill quality or planning skill content. This skill ships with Skill Builder — do not modify name, description, or triggers.",
-      "source": "./skills/skill-builder-practices",
-      "strict": false
-    }
+    { "name": "vibedata", "source": "./" }
   ]
 }
